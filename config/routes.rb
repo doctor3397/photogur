@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  # match any HTTP GET Request for the URL /pictures to the index action in the PicturesController"
   get 'pictures' => 'pictures#index'
-  
+
 end
