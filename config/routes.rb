@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'pictures#index'
+
   get 'pictures/new' => 'pictures#new'
   post 'pictures' => 'pictures#create'
 
@@ -6,5 +8,4 @@ Rails.application.routes.draw do
   get 'pictures' => 'pictures#index'
   get 'pictures/:id' => 'pictures#show', as: 'picture'
   # as: "picture", refer to this route as picture_path: the String is prepended to _path
-  root 'pictures#index'
 end
