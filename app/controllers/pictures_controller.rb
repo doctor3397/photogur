@@ -42,7 +42,8 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
 
     if @picture.update_attributes(picture_params)
-      redirect_to "/pictures/#{@picture.id}"
+      #redirect_to "/pictures/#{@picture.id}"
+      redirect_to picture_path(@picture)
     else
       render :edit
     end
@@ -55,6 +56,7 @@ class PicturesController < ApplicationController
     redirect_to pictures_url
   end
 
+  # Strogn Params
   private
   def picture_params
     params.require(:picture).permit(:artist, :title, :url)
