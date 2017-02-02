@@ -29,6 +29,10 @@ header a {
   color: #BDEB07;
 }
 
+header a:hover{
+  text-decoration: underline;
+}
+
 main {
   width: 960px;
   margin-left: auto;
@@ -59,3 +63,9 @@ img {
   width: 100vw;
   max-width: 100%;
 }
+
+input[type="submit"] {
+    text-decoration: none;
+    font-size: 16px;
+    color: #94B053;
+  }
