@@ -20,6 +20,12 @@ class PicturesController < ApplicationController
 
     # make a new picture with what picture_params returns (which is a method we're calling)
     @picture = Picture.new(picture_params)
+    # for form_tag
+    # @picture = Picture.new(
+    #   :url params[:url],
+    #   :title params[:title]
+    #   :artist params[:artist]
+    # )
 
     if @picture.save
       # if the save for the picture was successful, go to index.html.erb

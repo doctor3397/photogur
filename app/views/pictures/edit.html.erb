@@ -1,8 +1,7 @@
 <h1>Edit Picture</h1>
 
-<p>
-  <%= link_to "Back", picture_path(@picture) %>
-</p>
+<button type="button" name="button"><%= link_to "Back", picture_path(@picture) %></button>
+
 
 <%= form_for @picture do |f| %>
   <p>

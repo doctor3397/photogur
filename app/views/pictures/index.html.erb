@@ -1,5 +1,8 @@
 <h1>Pictures (<%= @pictures.length %>)</h1>
-<%= link_to "New Picture",  new_picture_path %>
+<button type="button" name="button">
+  <%= link_to "New Picture",  new_picture_path %>
+</button>
+
 
 <% @pictures.each do |picture| %>
   <p><%= picture.title %>, <%= picture.artist %></p>
