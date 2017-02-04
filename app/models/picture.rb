@@ -1,4 +1,11 @@
 class Picture < ApplicationRecord
+  has_many :comments #comments table has a picture_id column
+  # @picture.comments
+  # @picture.comments <<
+  # @picture.comments.where(...)
+  # @picture.comments.count
+  # etc
+
   #validates before the data is saved in db
   validates :artist, presence: true
   # minimum length 3 characters, maximum length 20 characters
