@@ -9,8 +9,14 @@ class ApplicationController < ActionController::Base
 
   # We can put methods we want accessible to multiple controllers in the ApplicationController as they'll all inherit from them.
 
+  helper_method :current_user
   # For example, the following would provide a useful current_user method throughout our controllers:
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+
+  # def current_user
+  #   session[:user_id] && User.find(session[:user_id])
+  # end
+
 end
