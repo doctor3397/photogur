@@ -1,12 +1,22 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   get 'users/new'
 
   get 'users/create'
 
-  root 'pictures#index'
+  root 'users#new'
+
+  #root 'pictures#index'
 
   resources :pictures
   resource :users, only: [:new, :create]
+  resource :sessions, only: %i(new create destroy)
+
   # match any HTTP GET Request for the URL /pictures to the index action in the PicturesController"
   # get 'pictures' => 'pictures#index'
   # get 'pictures/new' => 'pictures#new'
