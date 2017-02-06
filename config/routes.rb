@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'pictures#index'
 
   resources :pictures
+  resource :users, only: [:new, :create]
   # match any HTTP GET Request for the URL /pictures to the index action in the PicturesController"
   # get 'pictures' => 'pictures#index'
   # get 'pictures/new' => 'pictures#new'
